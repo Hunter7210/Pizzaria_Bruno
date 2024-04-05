@@ -14,8 +14,8 @@ if (!empty($_POST)) {
     $pizza = isset($_POST['pizza']) ? $_POST['pizza'] : '';
     $cadastro = isset($_POST['cadastro']) ? $_POST['cadastro'] : date('Y-m-d H:i:s');
     // Insere um novo registro na tabela contacts
-    $stmt = $pdo->prepare('INSERT INTO contatos (id_contato, nome, email, cel, pizza, cadastro) VALUES (?, ?, ?, ?, ?, ?)');
-    $stmt->execute([$id_contato, $nome, $email, $cel, $pizza, $cadastro]);
+    $stmt = $pdo->prepare('INSERT INTO contatos (id_contato, nome, email, cel, pizza, cadastro) VALUES (1, ?, ?, ?, ?, ?)');
+    $stmt->execute([$nome, $email, $cel, $pizza, $cadastro]);
     // Mensagem de saída
     $msg = 'Pedido Realizado com Sucesso!';
 }
@@ -29,7 +29,7 @@ if (!empty($_POST)) {
     <form action="create.php" method="post">
         <label for="id_contato">ID</label>
         <label for="nome">Nome</label>
-        <input type="text" name="id_contato" placeholder="Digite seu ID" id_contato="id_contato">
+        <input type="text" name="id_contato" placeholder="Digite seu ID" id_contato="id_contato" disabled="true">
         <input type="text" name="nome" placeholder="Seu Nome" id_contato="nome">
         <label for="email">Email</label>
         <label for="cel">Celular</label>
