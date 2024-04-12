@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS contatos(
 
 INSERT INTO contatos (id_contato, nome, email, cel, pizza, cadastro) VALUES (1, 'Heitor', 'hei@gm.com', 199, 'Calabresa', 20.01.2024 01:10);
  */
-/* SELECT * FROM contatos; */
+SELECT * FROM contatos;
 /* SELECT * FROM contatos ORDER BY id_contato OFFSET :offset 1 :1  */
 
 
@@ -30,3 +30,4 @@ INSERT INTO contatos (id_contato, nome, email, cel, pizza, cadastro) VALUES (1, 
 SELECT * FROM pizza;
  */
 
+CREATE 
